@@ -11,7 +11,7 @@ I wrote at
 - [AudioKit](http://audiokit.io) 2.x
 - ARC
 - [CocoaPods](https://cocoapods.org)
-- Swift 2.0
+- Swift 3.0
 
 ## Installing
 

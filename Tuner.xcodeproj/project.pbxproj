@@ -9,13 +9,11 @@
 /* Begin PBXBuildFile section */
 		14878030E4C60E3A6C1FB61C /* PlotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1487826AD02914E7BB317157 /* PlotView.swift */; };
 		1487809C20BB2EF653F9AD7F /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14878556100B2D4DE2154D27 /* Note.swift */; };
-		14878184804F07CD4153721E /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 14878C2FB15F67ACDCC0D2D7 /* README.md */; };
 		148782E6EACC35A35E6F6260 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14878BA9E285ABA6996AD881 /* ViewController.swift */; };
 		1487842D3A0FA4BC5B492A6D /* Tuner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14878C1CC045CE090B48EE77 /* Tuner.swift */; };
 		1487858AF45EBAEC852D6AB6 /* KnobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1487812E2DC0C0E1F51B39A6 /* KnobView.swift */; };
 		14878AAD9DFDAA74AE8B55E7 /* Pitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14878DD3087749845A1455C4 /* Pitch.swift */; };
 		14878B57D0A6BCDE9AB2A285 /* DisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14878967499E231C9050DAE8 /* DisplayView.swift */; };
-		14878DD67483B7BE28AB86C0 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 148781FAB59443D9165032E3 /* LICENSE */; };
 		22178DB21C4D687E001B61AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22178DB11C4D687E001B61AB /* AppDelegate.swift */; };
 		22178DB71C4D687E001B61AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22178DB51C4D687E001B61AB /* Main.storyboard */; };
 		22178DBC1C4D687E001B61AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22178DBA1C4D687E001B61AB /* LaunchScreen.storyboard */; };
@@ -137,12 +135,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 22178DC01C4D687E001B61AB /* Build configuration list for PBXNativeTarget "Tuner" */;
 			buildPhases = (
-				0C85838980FCD11165508031 /* Check Pods Manifest.lock */,
+				0C85838980FCD11165508031 /* [CP] Check Pods Manifest.lock */,
 				22178DAA1C4D687E001B61AB /* Sources */,
 				22178DAB1C4D687E001B61AB /* Frameworks */,
 				22178DAC1C4D687E001B61AB /* Resources */,
-				6D38BAA1B08979875724AA8E /* Embed Pods Frameworks */,
-				1CA3C8C263B2F9E2A656D4A7 /* Copy Pods Resources */,
+				6D38BAA1B08979875724AA8E /* [CP] Embed Pods Frameworks */,
+				1CA3C8C263B2F9E2A656D4A7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -165,6 +163,7 @@
 				TargetAttributes = {
 					22178DAD1C4D687E001B61AB = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0820;
 					};
 				};
 			};
@@ -194,36 +193,35 @@
 				22178DBC1C4D687E001B61AB /* LaunchScreen.storyboard in Resources */,
 				22178DB71C4D687E001B61AB /* Main.storyboard in Resources */,
 				2234C03D1C6E9A900023CAB7 /* Assets.xcassets in Resources */,
-				14878DD67483B7BE28AB86C0 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0C85838980FCD11165508031 /* Check Pods Manifest.lock */ = {
+		0C85838980FCD11165508031 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		1CA3C8C263B2F9E2A656D4A7 /* Copy Pods Resources */ = {
+		1CA3C8C263B2F9E2A656D4A7 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -231,14 +229,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tuner/Pods-Tuner-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6D38BAA1B08979875724AA8E /* Embed Pods Frameworks */ = {
+		6D38BAA1B08979875724AA8E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,7 +259,6 @@
 				14878B57D0A6BCDE9AB2A285 /* DisplayView.swift in Sources */,
 				1487858AF45EBAEC852D6AB6 /* KnobView.swift in Sources */,
 				14878030E4C60E3A6C1FB61C /* PlotView.swift in Sources */,
-				14878184804F07CD4153721E /* README.md in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +378,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.timvanelsloo.Tuner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -397,6 +395,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.timvanelsloo.Tuner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
