@@ -3,6 +3,8 @@
 # Uncomment this line if you're using Swift
 use_frameworks!
 
+platform :ios
+
 target 'Tuner' do
 	pod 'AudioKit', '~> 2.2'
 end
