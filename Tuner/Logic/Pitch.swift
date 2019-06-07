@@ -97,7 +97,7 @@ func ==(a: Pitch, b: Pitch) -> Bool {
  */
 func +(pitch: Pitch, offset: Int) -> Pitch {
     let all   = Pitch.all
-    let index = all.index(where: { $0 == pitch })! + offset
+    let index = all.firstIndex(where: { $0 == pitch })! + offset
 
     return all[(index % all.count + all.count) % all.count]
 }

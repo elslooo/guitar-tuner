@@ -112,7 +112,7 @@ class KnobView: UIView {
         
         for (i, label) in labels.enumerated() {
             label.frame               = CGRect(x: 0.0, y: 0.0, width: 80.0, height: 40.0)
-            label.alignmentMode       = kCAAlignmentCenter
+            label.alignmentMode       = CATextLayerAlignmentMode.center
             label.contentsScale       = UIScreen.main.scale
             label.foregroundColor     = UIColor.white.cgColor
             label.font                = UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.ultraLight)

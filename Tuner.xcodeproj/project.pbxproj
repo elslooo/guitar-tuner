@@ -162,7 +162,7 @@
 				TargetAttributes = {
 					22178DAD1C4D687E001B61AB = {
 						CreatedOnToolsVersion = 7.2;
-						LastSwiftMigration = 0940;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -391,8 +391,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.timvanelsloo.Tuner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -409,8 +408,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.timvanelsloo.Tuner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
