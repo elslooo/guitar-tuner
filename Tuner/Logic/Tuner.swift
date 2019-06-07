@@ -72,7 +72,7 @@ class Tuner: NSObject {
         timer?.invalidate()
     }
 
-    func tick() {
+    @objc func tick() {
         /* Read frequency and amplitude from the analyzer. */
         let frequency = Double(analyzer.trackedFrequency.floatValue)
         let amplitude = Double(analyzer.trackedAmplitude.floatValue)
