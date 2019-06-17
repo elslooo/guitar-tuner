@@ -57,8 +57,8 @@ enum Note: CustomStringConvertible {
      * This function returns the frequency of this note in the 4th octave.
      */
     var frequency: Double {
-        let index = Note.all.index(where: { $0 == self   })! -
-                    Note.all.index(where: { $0 == Note.a(nil) })!
+        let index = Note.all.firstIndex(where: { $0 == self   })! -
+                    Note.all.firstIndex(where: { $0 == Note.a(nil) })!
 
         return 440 * pow(2, Double(index) / 12.0)
     }

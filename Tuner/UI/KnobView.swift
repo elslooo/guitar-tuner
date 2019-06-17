@@ -33,7 +33,7 @@ class KnobView: UIView {
     
     var distance: Double = 0 {
         didSet {
-            let angle = CGFloat(distance * M_PI)
+            let angle = CGFloat(distance * Double.pi)
             turnLayer.setAffineTransform(CGAffineTransform(rotationAngle: -angle))
             
             for label in labels {
@@ -112,14 +112,14 @@ class KnobView: UIView {
         
         for (i, label) in labels.enumerated() {
             label.frame               = CGRect(x: 0.0, y: 0.0, width: 80.0, height: 40.0)
-            label.alignmentMode       = kCAAlignmentCenter
+            label.alignmentMode       = CATextLayerAlignmentMode.center
             label.contentsScale       = UIScreen.main.scale
             label.foregroundColor     = UIColor.white.cgColor
-            label.font                = UIFont.systemFont(ofSize: 17, weight: UIFontWeightUltraLight)
+            label.font                = UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.ultraLight)
             label.fontSize            = 17.0
             
             if i == 2 {
-                label.font            = UIFont.systemFont(ofSize: 36, weight: UIFontWeightUltraLight)
+                label.font            = UIFont.systemFont(ofSize: 36, weight: UIFont.Weight.ultraLight)
                 label.fontSize       *= 2.0
             }
             
@@ -193,7 +193,7 @@ class KnobView: UIView {
 
     fileprivate var updated = 0
 
-    func tick() {
+    @objc func tick() {
         if updated == 0 {
             self.distance = 0.0
             self.pitch    = nil
